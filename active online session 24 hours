@@ -1,0 +1,51 @@
+1) System prep (one-time)
+sudo apt update
+sudo apt install -y python3-pip python3-venv tmux git
+mkdir -p ~/apps/mybot && cd ~/apps/mybot
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+# Your libs (adjust versions if you need)
+pip install python-telegram-bot==21.* telethon pyrogram tgcrypto python-dotenv
+
+2) Quick tmux run (your style)
+
+Your sequence, but productionized:
+
+# start a named tmux session
+tmux new -s mybot
+# inside tmux:
+cd ~/apps/mybot
+source .venv/bin/activate
+python3 your_script.py
+# detach (keeps running):  Ctrl+b  then  d
+
+
+* HOW TO STOP SESSION *
+
+
+If you started it with tmux
+
+SSH back into your VPS, then list sessions:- 
+
+tmux ls
+
+
+Kill just the mybot session (recommended):- 
+
+tmux kill-session -t mybot
+
+
+That immediately stops everything running inside that tmux session (your bot + any loop like run_bot.sh).
+
+( Alternatives )
+
+Kill all tmux sessions: -
+
+tmux kill-server
+
+
+If you prefer to attach and stop manually: -
+
+tmux attach -t mybot
+# inside: press Ctrl+C to stop python, then type:  exit
