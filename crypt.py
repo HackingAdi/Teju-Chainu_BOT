@@ -1040,7 +1040,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
             else:
                 keyboard = [
                     [InlineKeyboardButton("🔑 Request Approval", callback_data="request_approval")],
-                    [InlineKeyboardButton("💬 Contact Support", url="https://t.me/Let_mee_knew")]
+                    [InlineKeyboardButton("💬 Contact Support", url="https://t.me/TH68885")]
                 ]
                 reply_markup = InlineKeyboardMarkup(keyboard)
                 
