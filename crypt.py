@@ -15,7 +15,7 @@ from telethon import TelegramClient, events
 from pyrogram import Client
 
 # ==================== CONFIGURATION - REPLACE ALL VALUES ====================
-BOT_TOKEN = "8402664705:AAFdeu1-W7_NHr23-cfCNMwALbpvcCDOiDg"                    # Replace with Bot A token
+BOT_TOKEN = "8555158426:AAEgC5OwjuyC1S6n8hul_hvgFfjc4FTJBQQ"                    # Replace with Bot A token
 API_ID = 20192130                                 # Replace with your API ID
 API_HASH = "00344f6d993dfa9cd8ce6ec535a10394"                   # Replace with your API hash
 ADMIN_ID = 7566173874                              # Replace with admin user ID
